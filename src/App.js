@@ -1,23 +1,18 @@
-import React from "react";
-import { Badge } from "shards-react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "shards-ui/dist/css/shards.min.css"
-
+import React from 'react';
+import logo from './logo.svg';
 import './App.css';
+import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react'
 
 function App() {
   return (
-    <div className="example">
-      <Badge>Primary</Badge>
-      <Badge theme="secondary">Secondary</Badge>
-      <Badge theme="success">Success</Badge>
-      <Badge theme="info">Info</Badge>
-      <Badge theme="warning">Warning</Badge>
-      <Badge theme="danger">Danger</Badge>
-      <Badge theme="light">Light</Badge>
-      <Badge theme="dark">Dark</Badge>
+    <div className="App">
+      <header>
+        <img src={logo} className="App-logo" alt="logo" />
+        <h1>We now have Auth!</h1>
+      </header>
+      <AmplifySignOut />
     </div>
   );
 }
 
-export default App;
+export default withAuthenticator(App);

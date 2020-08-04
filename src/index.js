@@ -1,17 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Button from '@material-ui/core/Button';
-import Grid from '@material-ui/core/Grid';
+import App from './App';
+import * as serviceWorker from './serviceWorker';
+import Amplify from 'aws-amplify';
+import config from './aws-exports';
+Amplify.configure(config);
 
 ReactDOM.render(
-  <div>
-    <h1 style={{ textAlign: 'center' }}>Testing for AWS (v2)</h1>
-    <Grid container justify="center">
-      <Button variant="contained" color="secondary">
-        This button doesn't do anything
-      </Button>
-    </Grid>
-  </div>,
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
   document.getElementById('root')
 );
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: https://bit.ly/CRA-PWA
+serviceWorker.unregister();
