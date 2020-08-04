@@ -6,7 +6,7 @@ import Grid from '@material-ui/core/Grid';
 
 ReactDOM.render(
   <div>
-    <h1 style={{ textAlign: 'center' }}>Testing for AWS</h1>
+    <h1 style={{ textAlign: 'center' }}>Testing for AWS (v2)</h1>
     <Grid container justify="center">
       <Button variant="contained" color="secondary">
         This button doesn't do anything
